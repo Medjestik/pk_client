@@ -1,0 +1,126 @@
+
+.streams {
+	margin: 0;
+	padding: 80px;
+	box-sizing: border-box;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.title {
+	margin: 0;
+	font-weight: 600;
+	font-size: 56px;
+	font-style: normal;
+	line-height: 1.05;
+	width: 100%;
+	color: var(--main-black-color);
+}
+
+.subtitle {
+	margin: 20px 0 40px 0;
+	font-weight: 400;
+	font-size: 16px;
+	font-style: normal;
+	line-height: 1.15;
+	color: var(--main-black-color);
+	max-width: 575px;
+}
+
+.list {
+	margin: 0;
+	width: 100%;
+	padding: 0;
+	list-style-type: none;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.item {
+	margin: 0;
+	width: 100%;
+	padding: 32px;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	background-color: #F6F7F9;
+	border-radius: 24px;
+	&__title {
+		margin: 24px 0 0 0;
+		font-size: 24px;
+		font-weight: 600;
+		line-height: 1.05;
+		transition: all .3s ease-out;
+	}
+	&__tags {
+		width: 100%;
+		padding: 0;
+		list-style-type: none;
+		margin: 24px 0 0 0;
+		display: flex;
+		align-items: center;
+		gap: 16px;
+	}
+	&__tag {
+		padding: 8px 12px;
+		width: fit-content;
+		border-radius: 8px;
+		font-size: 12px;
+		font-weight: 400;
+		background-color: #D9E8FF;
+		color: #072971;
+		transition: all .3s ease-out;
+	}
+}
+
+.parts {
+	margin: 24px 0 0 0;
+	width: 100%;
+	padding: 0;
+	list-style-type: none;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.part {
+	margin: 0;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	gap: 20px;
+	&__main {
+		width: 100%;
+		margin: 0;
+		padding: 12px 16px;
+		box-sizing: border-box;
+		display: flex;
+		align-items: center;
+		gap: 20px;
+		border-radius: 8px;
+		background-color: var(--main-white-color);
+	}
+	&__tag {
+		padding: 8px 12px;
+		min-width: 102px;
+		width: fit-content;
+		border-radius: 8px;
+		font-size: 12px;
+		font-weight: 400;
+		background-color: #2052B2;
+		color: var(--main-white-color);
+		text-align: center;
+		transition: all .3s ease-out;
+	}
+	&__title {
+		margin: 0;
+		font-weight: 600;
+		font-size: 20px;
+		font-style: normal;
+		line-height: 1.05;
+		color: var(--main-black-color);
+	}
+}
+

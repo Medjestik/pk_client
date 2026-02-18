@@ -9,7 +9,7 @@ import styles from './main.module.scss';
 
 export const Main: FC = () => {
 	return (
-		<div className={styles.main}>
+		<section className={styles.main}>
 			<Header />
 			<h1 className={styles.title}>
 				<span className={styles.title_color_blue}>Развивайте навыки,</span>{' '}
@@ -42,6 +42,6 @@ export const Main: FC = () => {
 					</div>
 				</div>
 			</div>
-		</div>
+		</section>
 	);
 };

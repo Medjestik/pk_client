@@ -13,7 +13,6 @@ export const Header: FC = () => {
 					<li className={styles.nav__item}>О ДПО</li>
 					<li className={styles.nav__item}>Возможности</li>
 					<li className={styles.nav__item}>Программы</li>
-					<li className={styles.nav__item}>Заказчики</li>
 					<li className={styles.nav__item}>Этапы обучения</li>
 					<li className={styles.nav__item}>Частые вопросы</li>
 				</ul>

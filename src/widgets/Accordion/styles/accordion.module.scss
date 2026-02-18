@@ -1,0 +1,110 @@
+.accordion {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+	gap: 12px;
+}
+
+.accordion__item {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 32px;
+  box-sizing: border-box;
+  background: var(--white-color);
+	border-bottom: 1px solid #DEDEDE;
+  transition: all .3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.accordion__main {
+  margin: 0px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  transition: all .3s ease-in-out;
+}
+
+.accordion__main:hover {
+  cursor: pointer;
+}
+
+.accordion__item_state_open {
+  background: #D9E8FF;
+	border-radius: 24px;
+	border-bottom: none;
+}
+
+.accordion__item_state_open .accordion__main {
+  margin: 0 0 12px 0;
+}
+
+.accordion__title {
+  margin: 0 20px 0 0;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 36px;
+  line-height: 1.15;
+  color: var(--title-color);
+  position: relative;
+  transition: all .3s ease-in-out;
+}
+
+.accordion__main:hover .accordion__title {
+  color: var(--main-color);
+}
+
+.accordion__item_state_open .accordion__main {
+  color: #072971;
+}
+
+.accordion__icon {
+  margin: 0px 0px 0px auto;
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  background-image: url('../../../shared/images/arrow.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 32px;
+  position: relative;
+  transform: rotate(0deg);
+  transition: all .3s ease-in-out;
+}
+
+.accordion__item_state_open .accordion__icon {
+  transform: rotate(180deg);
+}
+
+.accordion__children {
+  margin: 0;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.accordion__text {
+  margin: 0;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.15;
+  color: var(--title-color);
+	max-width: 70%;
+}
+
+@media all and (max-width: 1280px) {
+
+}
+
+@media all and (max-width: 1000px) {
+
+}
