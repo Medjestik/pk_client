@@ -33,13 +33,13 @@
 	.title {
 		font-size: 44px;
 	}
-	.subtitle {
-		margin: 20px 0 32px 0;
-	}
 }
 
 @media (max-width: 1440px) {
 	.faq {
 		padding: 40px 20px;
+	}
+	.subtitle {
+		margin: 20px 0 32px 0;
 	}
 }

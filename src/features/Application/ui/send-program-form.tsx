@@ -115,7 +115,7 @@ export const SendProgramForm: FC<ISendProgramFormProps> = ({ onSubmit }) => {
 						/>
 					</FormField>
 					<Button
-						text='Получить консультацию'
+						text='Отправить заявку'
 						type='submit'
 						color='blue'
 						isBlock={isBlockSubmit}

@@ -164,3 +164,9 @@
 		background-size: contain;
 	}
 }
+
+@media (max-width: 1440px) {
+	.button {
+		height: 48px;
+	}
+}

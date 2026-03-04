@@ -112,3 +112,11 @@
 	background: var(--background-color);
 	cursor: default;
 }
+
+@media (max-width: 1440px) {
+	.input {
+		height: 48px;
+		padding: 9px 16px 9px 16px;
+	}
+}
+

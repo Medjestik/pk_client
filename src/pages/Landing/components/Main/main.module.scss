@@ -116,4 +116,25 @@
 	.main {
 		padding: 20px;
 	}
+	.title {
+		margin: 40px 0 0 0;
+		font-size: 48px;
+	}
+	.info {
+		margin: auto 32px 40px;
+		width: calc(100% - 64px);
+	}
+	.caption {
+		gap: 8px;
+	}
+	.point {
+		width: 6px;
+		height: 6px;
+	}
+	.text {
+		font-size: 14px;
+	}
+	.buttons {
+		gap: 12px;
+	}
 }
