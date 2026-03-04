@@ -4,7 +4,7 @@ import styles from './description.module.scss';
 
 export const Description: FC = () => {
 	return (
-		<section className={styles.description}>
+		<section id='description' className={styles.description}>
 			<div className={styles.caption}>
 				<div className={styles.caption__point}></div>
 				<p className={styles.caption__text}>О ДПО</p>

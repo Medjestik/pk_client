@@ -27,7 +27,7 @@
 	left: 0;
 	right: 0;
 	bottom: 0;
-	background-color: rgba(0, 0, 0, 0.5);
+	background-color: rgba(7,41,113, 0.6);
 	z-index: 1000;
 }
 
@@ -66,11 +66,11 @@
 .close {
 	margin: 0;
 	padding: 0;
-	width: 40px;
-	height: 40px;
+	width: 28px;
+	height: 28px;
 	position: absolute;
-	top: 8px;
-	right: 16px;
+	top: 24px;
+	right: 24px;
 	background-image: url('../../../../shared/images/icons/close.svg');
 	background-position: center;
 	background-repeat: no-repeat;
@@ -87,12 +87,12 @@
 }
 
 .title {
-	margin: 0 0 12px 0;
+	margin: 12px 0 12px 0;
 	width: 100%;
-	font-size: 22px;
+	font-size: 28px;
 	font-style: normal;
-	font-weight: 900;
-	line-height: 26px;
+	font-weight: 600;
+	line-height: 28px;
 	text-align: left;
 	color: var(--main-black-color);
 }

@@ -5,6 +5,7 @@ export interface IFormProps {
 	subtitle?: string;
 	titleAlign?: 'center' | 'left';
 	formWidth?: 'full' | 'large' | 'default' | 'small';
+	direction?: 'column' | 'row';
 	withHeightStretch?: boolean;
 	name: string;
 	autoComplete?: string;

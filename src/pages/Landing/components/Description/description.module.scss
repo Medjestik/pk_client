@@ -82,11 +82,14 @@
 
 @media (max-width: 1600px) {
 	.description {
-		padding: 20px 40px 40px;
+		padding: 40px;
 	}
 	.title {
-		font-size: 48px;
+		font-size: 44px;
 		max-width: 600px;
+	}
+	.list {
+		margin: 40px 0 0 0;
 	}
 	.item {
 		grid-template-columns: 1fr 600px;
@@ -99,7 +102,7 @@
 
 @media (max-width: 1440px) {
 	.description {
-		padding: 20px;
+		padding: 40px 20px;
 	}
 }
 

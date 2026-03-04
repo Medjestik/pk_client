@@ -25,3 +25,21 @@
 	line-height: 1.15;
 	color: var(--main-black-color);
 }
+
+@media (max-width: 1600px) {
+	.faq {
+		padding: 40px;
+	}
+	.title {
+		font-size: 44px;
+	}
+	.subtitle {
+		margin: 20px 0 32px 0;
+	}
+}
+
+@media (max-width: 1440px) {
+	.faq {
+		padding: 40px 20px;
+	}
+}

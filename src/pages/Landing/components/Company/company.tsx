@@ -1,5 +1,7 @@
 import type { FC } from 'react';
 
+import { data } from './lib';
+
 import styles from './company.module.scss';
 
 export const Company: FC = () => {
@@ -12,16 +14,11 @@ export const Company: FC = () => {
 				</p>
 			</div>
 			<ul className={styles.list}>
-				<li className={styles.item}>Логотип компании</li>
-				<li className={styles.item}>Логотип компании</li>
-				<li className={styles.item}>Логотип компании</li>
-				<li className={styles.item}>Логотип компании</li>
-				<li className={styles.item}>Логотип компании</li>
-				<li className={styles.item}>Логотип компании</li>
-				<li className={styles.item}>Логотип компании</li>
-				<li className={styles.item}>Логотип компании</li>
-				<li className={styles.item}>Логотип компании</li>
-				<li className={styles.item}>Логотип компании</li>
+				{data.map((elem) => (
+					<li key={elem.id} className={styles.item}>
+						<img className={styles.img} src={elem.img} alt=''></img>
+					</li>
+				))}
 			</ul>
 		</section>
 	);

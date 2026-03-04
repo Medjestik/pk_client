@@ -101,10 +101,15 @@
 	max-width: 70%;
 }
 
-@media all and (max-width: 1280px) {
-
+@media (max-width: 1600px) {
+	.accordion__item {
+		padding: 24px;
+	}
+	.accordion__title {
+		font-size: 32px;
+	}
 }
 
-@media all and (max-width: 1000px) {
+@media (max-width: 1440px) {
 
 }

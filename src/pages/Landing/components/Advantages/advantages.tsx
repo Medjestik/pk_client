@@ -4,7 +4,7 @@ import styles from './advantages.module.scss';
 
 export const Advantages: FC = () => {
 	return (
-		<section className={styles.advantages}>
+		<section id='advantages' className={styles.advantages}>
 			<div className={styles.header}>
 				<h2 className={styles.title}>
 					Возможности и масштабы дополнительного образования

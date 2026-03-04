@@ -146,3 +146,26 @@
 		line-height: 1.15;
 	}
 }
+
+@media (max-width: 1600px) {
+	.advantages {
+		padding: 40px;
+	}
+	.title {
+		max-width: 720px;
+		font-size: 44px;
+	}
+	.item__tag {
+		padding: 4px 12px;
+	}
+	.item__title {
+		margin: 100px 0 0 0;
+		font-size: 32px;
+	}
+}
+
+@media (max-width: 1440px) {
+	.advantages {
+		padding: 40px 20px;
+	}
+}

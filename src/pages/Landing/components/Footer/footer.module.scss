@@ -46,6 +46,14 @@
 	font-style: normal;
 	line-height: 1.15;
 	color: var(--main-white-color);
+	text-decoration: none;
+	transition: all .3s ease-in-out;
+	&_active {
+		cursor: pointer;
+		&:hover {
+			opacity: .7;
+		}
+	}
 }
 
 .bottom {
@@ -65,4 +73,19 @@
 	font-style: normal;
 	line-height: 1.15;
 	color: var(--main-white-color);
+}
+
+@media (max-width: 1600px) {
+	.container {
+		padding: 40px;
+	}
+	.title {
+		font-size: 28px;
+	}
+}
+
+@media (max-width: 1440px) {
+	.container {
+		padding: 40px 20px;
+	}
 }

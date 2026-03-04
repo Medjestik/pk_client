@@ -1,7 +1,12 @@
 export interface IProgramsStore {
 	programs: IProgram[];
 	streams: IStream[];
+	programDetail: IProgram | null;
+	currentProgram: { name: string; id: number } | null;
+	currentBatch: IBatch | null;
 	isLoadingPrograms: boolean;
+	isLoadingAction: boolean;
+	isLoadingDetail: boolean;
 	error: string | null;
 }
 

@@ -1,20 +1,35 @@
-import type { IProgramsStore } from './types';
+import type { IProgramsStore, IBatch } from './types';
 
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 import * as actions from './actions';
 
 const initialState: IProgramsStore = {
 	programs: [],
 	streams: [],
+	currentProgram: null,
+	programDetail: null,
+	currentBatch: null,
 	isLoadingPrograms: false,
+	isLoadingAction: false,
+	isLoadingDetail: true,
 	error: null,
 };
 
 export const programsSlice = createSlice({
 	name: 'programs',
 	initialState,
-	reducers: {},
+	reducers: {
+		setCurrentProgram(
+			state,
+			action: PayloadAction<{ name: string; id: number } | null>
+		) {
+			state.currentProgram = action.payload;
+		},
+		setCurrentBatch(state, action: PayloadAction<IBatch | null>) {
+			state.currentBatch = action.payload;
+		},
+	},
 	extraReducers: (builder) => {
 		builder
 			.addCase(actions.getProgramsAction.pending, (state) => {
@@ -29,6 +44,18 @@ export const programsSlice = createSlice({
 				state.isLoadingPrograms = false;
 				state.error = action.error?.message || 'Не удалось загрузить программы';
 			})
+			.addCase(actions.getProgramDetailAction.pending, (state) => {
+				state.isLoadingDetail = true;
+				state.error = null;
+			})
+			.addCase(actions.getProgramDetailAction.fulfilled, (state, action) => {
+				state.isLoadingDetail = false;
+				state.programDetail = action.payload;
+			})
+			.addCase(actions.getProgramDetailAction.rejected, (state, action) => {
+				state.isLoadingDetail = false;
+				state.error = action.error?.message || 'Не удалось загрузить программы';
+			})
 			.addCase(actions.getStreamsAction.pending, (state) => {
 				state.isLoadingPrograms = true;
 				state.error = null;
@@ -40,6 +67,30 @@ export const programsSlice = createSlice({
 			.addCase(actions.getStreamsAction.rejected, (state, action) => {
 				state.isLoadingPrograms = false;
 				state.error = action.error?.message || 'Не удалось загрузить программы';
+			})
+			.addCase(actions.subscribeAction.pending, (state) => {
+				state.isLoadingAction = true;
+				state.error = null;
+			})
+			.addCase(actions.subscribeAction.fulfilled, (state) => {
+				state.isLoadingAction = false;
+			})
+			.addCase(actions.subscribeAction.rejected, (state, action) => {
+				state.isLoadingAction = false;
+				state.error = action.error?.message || 'Произошла ошибка';
+			})
+			.addCase(actions.subscribeWithBranchAction.pending, (state) => {
+				state.isLoadingAction = true;
+				state.error = null;
+			})
+			.addCase(actions.subscribeWithBranchAction.fulfilled, (state) => {
+				state.isLoadingAction = false;
+			})
+			.addCase(actions.subscribeWithBranchAction.rejected, (state, action) => {
+				state.isLoadingAction = false;
+				state.error = action.error?.message || 'Произошла ошибка';
 			});
 	},
 });
+
+export const { setCurrentProgram, setCurrentBatch } = programsSlice.actions;

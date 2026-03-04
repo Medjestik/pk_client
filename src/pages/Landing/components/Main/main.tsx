@@ -1,5 +1,7 @@
 import type { FC } from 'react';
 
+import { Link } from 'react-scroll';
+
 import { Header } from '../Header/header';
 import { Button } from '../../../../shared/components/Button/ui/button';
 
@@ -37,8 +39,22 @@ export const Main: FC = () => {
 						<p className={styles.text}>От 2-х недель</p>
 					</div>
 					<div className={styles.buttons}>
-						<Button text='Получить консультацию' color='white' />
-						<Button text='Подобрать программу' color='blue' />
+						<Link
+							to='feedback'
+							smooth={true}
+							offset={0}
+							duration={3000}
+							spy={true}>
+							<Button text='Получить консультацию' color='white' />
+						</Link>
+						<Link
+							to='programs'
+							smooth={true}
+							offset={0}
+							duration={1500}
+							spy={true}>
+							<Button text='Подобрать программу' color='blue' />
+						</Link>
 					</div>
 				</div>
 			</div>

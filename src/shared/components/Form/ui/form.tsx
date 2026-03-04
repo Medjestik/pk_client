@@ -8,6 +8,7 @@ export const Form: FC<IFormProps> = ({
 	subtitle,
 	titleAlign = 'left',
 	formWidth = 'full',
+	direction = 'column',
 	withHeightStretch = false,
 	name,
 	autoComplete = 'on',
@@ -18,7 +19,8 @@ export const Form: FC<IFormProps> = ({
 		<form
 			className={`${styles.container} ${
 				styles[`container_width_${formWidth}`]
-			} ${withHeightStretch ? styles.container_height_stretch : ''}`}
+			} ${withHeightStretch ? styles.container_height_stretch : ''}
+			${direction === 'row' ? styles.container_direction_row : ''}`}
 			name={name}
 			id={name}
 			onSubmit={onSubmit}

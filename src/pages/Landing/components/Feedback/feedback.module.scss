@@ -27,11 +27,17 @@
 	max-width: 575px;
 }
 
-.caption {
-	margin: 12px 0 0 0;
-	font-weight: 400;
-	font-size: 12px;
-	font-style: normal;
-	line-height: 1.15;
-	color: #2052B2;
+@media (max-width: 1600px) {
+	.feedback  {
+		padding: 40px;
+	}
+	.title {
+		font-size: 44px;
+	}
+}
+
+@media (max-width: 1440px) {
+	.feedback  {
+		padding: 40px 20px;
+	}
 }

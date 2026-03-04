@@ -8,7 +8,7 @@ import styles from './faq.module.scss';
 
 export const FAQ: FC = () => {
 	return (
-		<section className={styles.faq}>
+		<section id='faq' className={styles.faq}>
 			<h2 className={styles.title}>Часто задаваемые вопросы</h2>
 			<p className={styles.subtitle}>
 				Ответы на самые популярные вопросы о поступлении и обучении.

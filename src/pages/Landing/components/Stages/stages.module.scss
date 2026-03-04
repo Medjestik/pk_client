@@ -4,7 +4,7 @@
 	box-sizing: border-box;
 	width: 100%;
 	display: flex;
-	gap: 20px;
+	gap: 40px;
 }
 
 .column {
@@ -33,4 +33,22 @@
 	line-height: 1.15;
 	color: var(--main-black-color);
 	max-width: 350px;
+}
+
+@media (max-width: 1600px) {
+	.stages {
+		padding: 40px;
+	}
+	.title {
+		font-size: 44px;
+	}
+}
+
+@media (max-width: 1440px) {
+	.stages {
+		padding: 40px 20px;
+	}
+	.column {
+		max-width: 325px;
+	}
 }
