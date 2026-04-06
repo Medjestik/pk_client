@@ -1,0 +1,108 @@
+.format {
+	width: 100%;
+	margin: 0;
+	padding: 100px 16px;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+}
+
+.title {
+	margin: 0 0 0 44px;
+	font-weight: 500;
+	font-size: 56px;
+	font-style: bold;
+	line-height: 1.05;
+	color: var(--main-black-color);
+	&_color {
+		color: var(--main-blue-color);
+	}
+}
+
+.container {
+	width: 100%;
+	margin: 20px 0 0 0;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 20px;
+}
+
+.card {
+	width: 100%;
+	min-height: 820px;
+	margin: 0;
+	padding: 100px 44px;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	background-color: var(--main-grey-background-color);
+	border-radius: 60px;
+	position: relative;
+	&__title {
+		margin: 0;
+		font-weight: 500;
+		font-size: 48px;
+		line-height: 1;
+		color: var(--main-black-color);
+		&_color {
+			color: var(--main-blue-color);
+		}
+	}
+	&__subtitle {
+		margin: 40px 0 0 0;
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 1.15;
+		color: var(--main-black-color);
+		max-width: 600px;
+	}
+	&__list {
+		margin: 40px 0 auto 0;
+		padding: 0;
+		list-style-type: none;
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		position: relative;
+	}
+	&__item {
+		margin: 0;
+		padding: 0 0 0 32px;
+		position: relative;
+		font-weight: bold;
+		font-size: 20px;
+		line-height: 1.15;
+		color: var(--main-black-color);
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 22px;
+			height: 22px;
+			background-image: url('../../../../shared/images/check.svg');
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: contain;
+		}
+	}
+	&__img {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		width: 380px;
+		height: 470px;
+		&_type_1 {
+			background-image: url('../../../../shared/images/format-1.png');
+			background-position: right;
+			background-repeat: no-repeat;
+			background-size: contain;
+		}
+		&_type_2 {
+			background-image: url('../../../../shared/images/format-2.png');
+			background-position: right;
+			background-repeat: no-repeat;
+			background-size: contain;
+		}
+	}
+}

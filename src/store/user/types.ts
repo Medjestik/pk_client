@@ -9,8 +9,7 @@ export interface IRegistrationRequest {
 	middle_name: string;
 	email: string;
 	phone: string;
-	comment: string;
-	department: number;
+	courses: string[];
 }
 
 export interface IAuthResponse {

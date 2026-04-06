@@ -4,5 +4,4 @@ export interface IRegistrationForm {
 	middleName: string;
 	email: string;
 	phone: string;
-	comment: string;
 }

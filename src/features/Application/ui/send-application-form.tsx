@@ -22,7 +22,7 @@ import {
 	shouldBlockSubmit,
 } from '../lib/helpers';
 import { getErrorMessage } from '../../../shared/lib/getErrorMessage';
-import { subscribeAction } from '../../../store/programs/actions';
+import { subscribeAction } from '../../../store/landing/actions';
 
 import styles from '../styles/send-application-form.module.scss';
 

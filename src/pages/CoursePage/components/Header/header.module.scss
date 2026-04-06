@@ -1,0 +1,44 @@
+.header {
+	margin: 0;
+	padding: 10px 44px;
+	box-sizing: border-box;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: var(--main-grey-background-color);
+	border-radius: 20px;
+}
+
+.logos {
+	margin: 0;
+	display: flex;
+	align-items: center;
+	gap: 16px;
+}
+
+.logo {
+	margin: 0;
+	width: 100%;
+	height: 40px;
+	&_min {
+		width: 140px;
+		background-image: url('../../../../shared/images/logo-course-min.svg');
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: contain;
+	}
+	&_rut {
+		width: 180px;
+		background-image: url('../../../../shared/images/logo-course-rut.svg');
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: contain;
+	}
+}
+
+.buttons {
+	margin: 0;
+	display: flex;
+	align-items: center;
+	gap: 16px;
+}

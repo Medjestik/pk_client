@@ -19,7 +19,7 @@ import {
 	shouldBlockSubmit,
 } from '../lib/helpers';
 import { getErrorMessage } from '../../../shared/lib/getErrorMessage';
-import { subscribeWithBranchAction } from '../../../store/programs/actions';
+import { subscribeWithBranchAction } from '../../../store/landing/actions';
 import { convertDateShort } from '../../../shared/lib/date';
 
 import styles from '../styles/send-program-form.module.scss';
@@ -28,7 +28,7 @@ export const SendProgramForm: FC<ISendProgramFormProps> = ({ onSubmit }) => {
 	const dispatch = useDispatch();
 	const { showToast } = useToast();
 	const { currentProgram, currentBatch } = useSelector(
-		(state) => state.programs
+		(state) => state.landing
 	);
 	const { values, handleChange, handleCheckboxToggle, errors } =
 		useForm<IProgramForm>(initialFormValues, validationSchema);

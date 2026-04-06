@@ -1,0 +1,92 @@
+.gallery {
+  margin: 12px auto 20px;
+  max-width: 100%;
+}
+
+.item {
+  position: relative;
+  margin: 0 20px 0 0;
+  width: 100%;
+  outline: none;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  object-fit: contain;
+  object-position: center;
+  user-select: none;
+  pointer-events: none;
+}
+
+.tag {
+  position: absolute;
+  top: 12px;
+  right: 8px;
+  padding: 8px 16px;
+  background: #696969;
+  border-radius: 100px;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: var(--main-white-color);
+  user-select: none;
+  pointer-events: none;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.item:hover .overlay {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.tag_type_content {
+  background: #228B22;
+}
+.tag_type_video {
+  background: #066AFE;
+}
+.tag_type_task {
+  background: #8B0000;
+}
+.tag_type_timeline {
+  background: #4B0082;
+}
+.tag_type_panorama {
+  background: #008B8B;
+}
+.tag_type_map {
+  background: #FF8C00;
+}
+
+.dots {
+	margin: 16px 0 0 0;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: none;
+  background: var(--main-grey-color);
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.dotActive {
+	background: var(--main-blue-color);
+  transform: scale(1.3);
+}

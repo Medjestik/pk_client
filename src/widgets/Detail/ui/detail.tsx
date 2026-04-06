@@ -7,7 +7,7 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from '../../../store/store';
 import { useOnPressEsc } from '../../../hooks/useOnPressEsc';
 
-import { getProgramDetailAction } from '../../../store/programs/actions';
+import { getProgramDetailAction } from '../../../store/landing/actions';
 
 import { ModalOverlay } from '../../../shared/components/Modal/ui/modal-overlay';
 import { Button } from '../../../shared/components/Button/ui/button';
@@ -28,7 +28,7 @@ export const Detail: FC<IDetailProps> = ({
 }) => {
 	const dispatch = useDispatch();
 	const { currentProgram, programDetail, isLoadingDetail } = useSelector(
-		(state) => state.programs
+		(state) => state.landing
 	);
 	const modalRoot = document.getElementById('modal-root');
 

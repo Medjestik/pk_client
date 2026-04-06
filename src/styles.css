@@ -2,10 +2,10 @@
 @import url('./shared/fonts/fonts.css');
 
 :root {
-	--background-color: #f1f3f5;
+	--background-color: #ffffff;
 	--main-white-color: #ffffff;
-	--main-black-color: #2A2A2A;
-	--main-blue-color: #072971;
+	--main-black-color: #031515;
+	--main-blue-color: #066AFE;
 	--main-blue-light-color: #2052B2;
 	--main-blue-background-color: #DBEAFE;
 	--main-blue-dark-color: #3A4B9E;
@@ -32,7 +32,7 @@
 	color: var(--main-black-color);
 	font-weight: normal;
 	font-size: 16px;
-	font-family: 'Roboto', 'Avenir', 'Helvetica', 'Arial', sans-serif;
+	font-family: 'Gilroy', 'Avenir', 'Helvetica', 'Arial', sans-serif;
 	font-style: normal;
 	line-height: 1.5;
 	color-scheme: light dark;

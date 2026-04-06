@@ -10,6 +10,7 @@ export interface IButtonProps {
 		| 'default'
 		| 'blue'
 		| 'white'
+		| 'black'
 		| 'confirm'
 		| 'cancel'
 		| 'green'

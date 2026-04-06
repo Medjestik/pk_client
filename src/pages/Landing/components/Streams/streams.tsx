@@ -1,5 +1,5 @@
 import type { FC } from 'react';
-import type { IStream, IBatch } from '../../../../store/programs/types';
+import type { IStream, IBatch } from '../../../../store/landing/types';
 
 import { useState } from 'react';
 import { useDispatch, useSelector } from '../../../../store/store';
@@ -11,14 +11,14 @@ import { SendProgramForm } from '../../../../features/Application/ui/send-progra
 import {
 	setCurrentProgram,
 	setCurrentBatch,
-} from '../../../../store/programs/reducer';
+} from '../../../../store/landing/reducer';
 import { convertDateShort } from '../../../../shared/lib/date';
 
 import styles from './streams.module.scss';
 
 export const Streams: FC = () => {
 	const dispatch = useDispatch();
-	const { streams } = useSelector((state) => state.programs);
+	const { streams } = useSelector((state) => state.landing);
 
 	const STEP = 2;
 	const [visibleCount, setVisibleCount] = useState<number>(STEP);

@@ -1,0 +1,46 @@
+.tag {
+  margin: 0;
+  padding: 8px 16px;
+  background: var(--main-grey-color);
+  border-radius: 100px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: var(--main-white-color);
+  user-select: none;
+  pointer-events: none;
+}
+.tag_type_history {
+  background: #228B22;
+}
+.tag_type_transport {
+  background: #066AFE;
+}
+.tag_type_technology {
+  background: #8B0000;
+}
+.tag_type_management {
+  background: #4B0082;
+}
+.tag_type_economy {
+  background: #008B8B;
+}
+.tag_type_safety {
+  background: #FF8C00;
+}
+.tag_type_analytics {
+  background: #6A5ACD;
+}
+.tag_type_business {
+  background: #2F4F4F;
+}
+
+@media all and (max-width: 600px) {
+  .tag {
+    padding: 6px 10px;
+    font-size: 14px;
+    line-height: 18px;
+  }
+}

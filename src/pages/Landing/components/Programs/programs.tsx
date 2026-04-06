@@ -1,5 +1,5 @@
 import type { FC, CSSProperties } from 'react';
-import type { IProgram } from '../../../../store/programs/types';
+import type { IProgram } from '../../../../store/landing/types';
 
 import { useState } from 'react';
 import { useDispatch, useSelector } from '../../../../store/store';
@@ -9,7 +9,7 @@ import { Modal } from '../../../../shared/components/Modal/ui/modal';
 import { Detail } from '../../../../widgets/Detail/ui/detail';
 import { SendProgramForm } from '../../../../features/Application/ui/send-program-form';
 
-import { setCurrentProgram } from '../../../../store/programs/reducer';
+import { setCurrentProgram } from '../../../../store/landing/reducer';
 
 import styles from './programs.module.scss';
 
@@ -20,7 +20,7 @@ const btnStyle: CSSProperties = {
 
 export const Programs: FC = () => {
 	const dispatch = useDispatch();
-	const { programs } = useSelector((state) => state.programs);
+	const { programs } = useSelector((state) => state.landing);
 
 	const STEP = 6;
 	const [visibleCount, setVisibleCount] = useState<number>(STEP);

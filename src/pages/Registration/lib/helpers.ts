@@ -1,7 +1,5 @@
 import type { IRegistrationForm } from '../types/types';
 import type { TFormValidationErrors } from '../../../shared/components/Form/types/types';
-import type { IDepartment } from '../../../store/catalog/types';
-
 import {
 	required,
 	phoneFormat,
@@ -39,13 +37,17 @@ export const initialRegistrationValues: IRegistrationForm = {
 	middleName: '',
 	email: '',
 	phone: '',
-	comment: '',
+};
+
+type CourseOption = {
+	id: string;
+	name: string;
 };
 
 export const shouldBlockSubmit = (
 	values: IRegistrationForm,
 	errors: TFormValidationErrors,
-	department: IDepartment | null
+	currentCourses: CourseOption[]
 ): boolean => {
 	return (
 		!values.lastName.trim() ||
@@ -58,6 +60,6 @@ export const shouldBlockSubmit = (
 		!!errors.email ||
 		!values.phone.trim() ||
 		!!errors.phone ||
-		!department
+		currentCourses.length < 1
 	);
 };

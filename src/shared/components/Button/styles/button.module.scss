@@ -54,6 +54,11 @@
 		background: var(--main-white-color);
 		border: 1px solid var(--main-white-color);
 	}
+	&_color_black {
+		color: var(--main-white-color);
+		background: var(--main-black-color);
+		border: 1px solid var(--main-black-color);
+	}
 	&_color_confirm {
 		color: var(--main-white-color);
 		background: var(--accent-green-color);

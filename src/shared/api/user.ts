@@ -27,18 +27,20 @@ export const login = (data: ILoginRequest) => {
 };
 
 export const registration = (data: IRegistrationRequest) => {
-	return request('/accounts/registration-requests/', {
+	return request('/action/register_pk', {
 		method: 'POST',
 		headers: {
 			Accept: 'application/json',
 			'Content-Type': 'application/json',
 		},
-		body: JSON.stringify(data),
-	}).then((res: IAuthResponse) => {
-		if (res.access) {
-			setTokens(res.access);
-		}
-		return res;
+		body: JSON.stringify({
+			surname: data.last_name,
+			firstname: data.first_name,
+			fathername: data.middle_name,
+			email: data.email,
+			phone: data.phone,
+			programs: data.courses,
+		}),
 	});
 };
 
