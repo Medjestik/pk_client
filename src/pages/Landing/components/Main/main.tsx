@@ -1,7 +1,8 @@
 import type { FC } from 'react';
 
-import { Link } from 'react-scroll';
+import { useNavigate } from 'react-router-dom';
 
+import { Link } from 'react-scroll';
 import { Header } from '../Header/header';
 import { Button } from '../../../../shared/components/Button/ui/button';
 
@@ -10,6 +11,7 @@ import video from '../../../../shared/images/video.mp4';
 import styles from './main.module.scss';
 
 export const Main: FC = () => {
+	const navigate = useNavigate();
 	return (
 		<section className={styles.main}>
 			<Header />
@@ -40,21 +42,18 @@ export const Main: FC = () => {
 					</div>
 					<div className={styles.buttons}>
 						<Link
-							to='feedback'
-							smooth={true}
-							offset={0}
-							duration={3000}
-							spy={true}>
-							<Button text='Получить консультацию' color='white' />
-						</Link>
-						<Link
 							to='programs'
 							smooth={true}
 							offset={0}
 							duration={1500}
 							spy={true}>
-							<Button text='Подобрать программу' color='blue' />
+							<Button text='Подобрать программу' color='white' />
 						</Link>
+						<Button
+							text='Открытые online курсы'
+							color='blue'
+							onClick={() => navigate('/course')}
+						/>
 					</div>
 				</div>
 			</div>

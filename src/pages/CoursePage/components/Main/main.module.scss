@@ -71,3 +71,29 @@
 	background-size: contain;
 	z-index: 3;
 }
+
+@media (max-width: 1440px) {
+	.caption {
+		font-size: 188px;
+	}
+	.title {
+		font-size: 40px;
+		max-width: 600px;
+	}
+	.subtitle {
+		margin: 16px 0 auto 0;
+		font-size: 16px;
+		max-width: 540px;
+	}
+	.cube {
+		width: 400px;
+		height: 332px;
+	}
+
+	.img {
+		width: 400px;
+		height: 520px;
+		background-position: bottom;
+	}
+}
+
