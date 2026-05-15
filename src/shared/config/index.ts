@@ -2,9 +2,9 @@ export const getApiUrl = (): string => {
 	const { hostname } = window.location;
 
 	if (hostname === 'localhost') {
-		return 'https://api.emiit.ru/_wt/pk';
+		return 'https://pk.emiit.ru/api';
 	} else {
-		return 'https://api.emiit.ru/_wt/pk';
+		return 'https://pk.emiit.ru/api';
 	}
 };
 
